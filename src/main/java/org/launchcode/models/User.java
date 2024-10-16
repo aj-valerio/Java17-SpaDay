@@ -2,8 +2,13 @@ package org.launchcode.models;
 
 public class User {
 
+    @NotBlank
+    @Size(min = 3, max = 12)
     private String username;
     private String email;
+
+    @NotBlank
+    @Size(min = 6)
     private String password;
     private static int nextId = 1;
     private final int id;
